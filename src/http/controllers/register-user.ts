@@ -27,7 +27,7 @@ export async function registerUser(
         message: err.message
       })
     }
-    return reply.status(500).send()
+    throw err
   }
 
   return reply.status(201).send()
